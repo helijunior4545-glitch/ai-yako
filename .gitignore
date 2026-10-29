@@ -45,3 +45,46 @@ Thumbs.db
 .yako_v*_backup/
 .yako_v*_installed
 .yako_*_manifest.json
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*secret*
+*credentials*
+
+# Database
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.backup
+
+# Django
+staticfiles/
+media/
+
+# Node
+node_modules/
+dist/
+build/
+
+# Local installers and backups
+.yako_*_backup/
