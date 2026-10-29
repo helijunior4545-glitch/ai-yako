@@ -1,0 +1,1 @@
+"""AI Yako isolated component."""

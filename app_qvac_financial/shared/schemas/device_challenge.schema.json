@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Yako Device Challenge",
+  "type": "object",
+  "required": [
+    "device_id",
+    "identity_id",
+    "nonce",
+    "signature",
+    "timestamp_utc"
+  ],
+  "properties": {
+    "device_id": {
+      "type": "string"
+    },
+    "identity_id": {
+      "type": "string"
+    },
+    "nonce": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    },
+    "timestamp_utc": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

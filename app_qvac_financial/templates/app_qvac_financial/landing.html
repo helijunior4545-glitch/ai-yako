@@ -1,0 +1,51 @@
+{% extends 'app_qvac_financial/base.html' %}
+{% load static %}
+{% block title %}YAKO. — Financial Intelligence{% endblock %}
+{% block body %}
+<link rel="stylesheet" href="{% static 'app_qvac_financial/css/yako-landing-v1054.css' %}?v=1054">
+<link rel="stylesheet" href="{% static 'app_qvac_financial/css/yako-landing-video-v1064.css' %}?v=1064">
+<div class="yk-page" id="yk-page">
+  <a class="yk-skip" href="#yk-main">Pular para conteúdo</a>
+  <header class="yk-header yk-wrap">
+    <a class="yk-brand" href="{% url 'app_qvac_financial:landing' %}" aria-label="YAKO — início"><img src="{% static 'app_qvac_financial/brand/yako-512.png' %}" alt="" width="39" height="39"><span><strong>YAKO<span class="yk-green">.</span></strong><small>FINANCIAL INTELLIGENCE</small></span></a>
+    <nav class="yk-nav" aria-label="Navegação principal"><a href="#produto">Produto</a><a href="#recursos">Funcionalidades</a><a href="#demonstracao">Demonstração</a><a href="#downloads">Downloads</a><a href="#seguranca">Segurança</a></nav>
+    <div class="yk-header-actions"><a class="yk-outline yk-login" href="{% url 'app_qvac_financial:workspace' %}">Entrar</a><a class="yk-button yk-header-jury" href="{% url 'app_qvac_financial:workspace' %}">Explorar YAKO <span class="yk-inline-icon" aria-hidden="true"><svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
+  </header>
+  <main id="yk-main">
+    <section class="yk-hero yk-wrap" id="produto" aria-labelledby="yk-title">
+      <div class="yk-eyebrow">ASSISTENTE FINANCEIRO COM INTELIGÊNCIA ARTIFICIAL</div>
+      <h1 id="yk-title">Suas finanças em ordem<br>com o <span class="yk-green">YAKO.</span></h1>
+      <p class="yk-subtitle">Organize, analise e explore cenários financeiros com inteligência artificial.<br class="yk-wide-only"> Mais clareza para decidir, com você no controle.</p>
+      <div class="yk-hero-actions"><a class="yk-button" href="#demonstracao"><span class="yk-play-dot" aria-hidden="true"><svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="6 3 20 12 6 21 6 3"/></svg></span> Assistir à demonstração</a><a class="yk-outline" href="{% url 'app_qvac_financial:workspace' %}">Abrir o sistema <span class="yk-inline-icon" aria-hidden="true"><svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
+      <div class="yk-video-frame" id="demonstracao" aria-label="Demonstração do produto">
+        <video id="yk-video" playsinline autoplay muted loop preload="metadata" aria-label="Vídeo de demonstração real do YAKO">
+          <source src="{% static 'app_qvac_financial/media/yakovideo.mp4' %}" type="video/mp4">
+          {% if landing_content.captions_url %}<track kind="captions" src="{{ landing_content.captions_url }}" srclang="pt" label="Português">{% endif %}
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+        <button class="yk-video-cover" id="yk-video-cover" type="button" aria-label="Reproduzir demonstração"><span class="yk-video-cover-play" aria-hidden="true"><svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="6 3 20 12 6 21 6 3"/></svg></span><span class="yk-video-cover-label">VER O YAKO EM AÇÃO</span></button>
+        <div class="yk64-controls" role="group" aria-label="Controles do vídeo">
+          <button type="button" data-yk64-play aria-label="Pausar vídeo">Ⅱ Pausar</button>
+          <button type="button" data-yk64-sound aria-label="Ativar som" aria-pressed="false">♫ Ativar som</button>
+        </div>
+      </div>
+      <p class="yk-video-note">Demonstração em vídeo do produto <span aria-hidden="true">·</span> Acesso ao sistema real</p>
+    </section>
+    <section class="yk-features yk-wrap" id="recursos" aria-label="Recursos do produto">
+      <article class="yk-feature"><span class="yk-feature-icon" aria-hidden="true"><svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></span><h2>Visão financeira</h2><p>Organize informações e entenda seus números.</p></article>
+      <article class="yk-feature"><span class="yk-feature-icon" aria-hidden="true"><svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 18V5a3 3 0 0 0-5.7-1.3A4 4 0 0 0 4 10a4 4 0 0 0 .7 7A4 4 0 0 0 12 18Zm0 0V5a3 3 0 0 1 5.7-1.3A4 4 0 0 1 20 10a4 4 0 0 1-.7 7A4 4 0 0 1 12 18Z"/><path d="M8 9c-2 0-3 1-3 3m11-3c2 0 3 1 3 3M8 15c-1 0-2 1-2 2m10-2c1 0 2 1 2 2"/></svg></span><h2>Inteligência aplicada</h2><p>Explore perguntas, cálculos e cenários.</p></article>
+      <article class="yk-feature" id="seguranca"><span class="yk-feature-icon" aria-hidden="true"><svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span><h2>Você no controle</h2><p>Análises informativas, sem executar transações.</p></article>
+      <article class="yk-feature"><span class="yk-feature-icon" aria-hidden="true"><svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M8 21h4m-2-4v4"/><rect x="18" y="8" width="4" height="12" rx="1"/></svg></span><h2>Acesso flexível</h2><p>Use a experiência web no seu dispositivo.</p></article>
+    </section>
+    <section class="yk-jury yk-wrap" aria-labelledby="yk-jury-title"><div class="yk-jury-icon" aria-hidden="true"><svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="yk-jury-copy"><span class="yk-eyebrow">EXPERIMENTE O PRODUTO</span><h2 id="yk-jury-title">Explore o YAKO. agora</h2><p>Entre na aplicação e conheça os recursos que estão realmente disponíveis.</p></div><a class="yk-button" href="{% url 'app_qvac_financial:workspace' %}">Acessar o sistema <span class="yk-inline-icon" aria-hidden="true"><svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></section>
+    <section class="yk-downloads yk-wrap" id="downloads" aria-labelledby="yk-download-title"><span class="yk-eyebrow">BAIXE O YAKO.</span><h2 id="yk-download-title">Seu workspace, onde você estiver.</h2><p>Instaladores oficiais aparecem aqui quando publicados e verificados.</p>
+      <div class="yk-releases">{% for release in landing_content.releases %}
+        <a class="yk-release" href="{{ release.url }}" target="_blank" rel="noopener noreferrer"><span class="yk-platform" aria-hidden="true">{% if release.platform == 'Windows' %}<svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 5 11 4v8H3zm10-1 8-1v9h-8zM3 14h8v8l-8-1zm10 0h8v9l-8-1z"/></svg>{% elif release.platform == 'Linux' %}<svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="3" width="14" height="18" rx="5"/><path d="M9 10h.01M15 10h.01M9 15c2 2 4 2 6 0"/></svg>{% else %}<svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>{% endif %}</span><span class="yk-release-text"><strong>{{ release.platform }}</strong><small>{{ release.label }} · {{ release.version }}</small>{% if release.sha256 %}<small class="yk-hash" title="SHA-256">SHA-256: {{ release.sha256 }}</small>{% endif %}</span><span class="yk-download-arrow" aria-hidden="true"><svg class="yk-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg></span></a>
+      {% empty %}<div class="yk-release-empty">Nenhum instalador publicado ainda. <a href="{% url 'app_qvac_financial:workspace' %}">Usar versão web ↗</a></div>{% endfor %}</div>
+    </section>
+  </main>
+  <footer class="yk-footer yk-wrap"><a class="yk-brand" href="{% url 'app_qvac_financial:landing' %}"><img src="{% static 'app_qvac_financial/brand/yako-512.png' %}" alt="" width="32" height="32"><span><strong>YAKO<span class="yk-green">.</span></strong><small>FINANCIAL INTELLIGENCE</small></span></a><p>Análises educacionais; não executa transações nem constitui aconselhamento financeiro.</p><span>© {% now 'Y' %} YAKO.</span></footer>
+</div>
+<script src="{% static 'app_qvac_financial/js/yako-landing-v1054.js' %}?v=1054" defer></script>
+<script defer src="{% static 'app_qvac_financial/js/yako-landing-video-v1064.js' %}?v=1064"></script>
+{% endblock %}

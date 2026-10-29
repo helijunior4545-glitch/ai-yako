@@ -1,0 +1,21 @@
+
+/* V10.64.1 — centralização real, sem deslocamento do vídeo */
+#demonstracao.yk-video-frame{
+  position:relative!important;display:flex!important;align-items:center!important;
+  justify-content:center!important;width:100%;aspect-ratio:4/3;
+  min-height:0!important;overflow:hidden;background:#0d1512;
+  padding:0!important;margin-left:auto;margin-right:auto;
+}
+#demonstracao.yk-video-frame video#yk-video{
+  position:relative!important;inset:auto!important;transform:none!important;
+  display:block!important;flex:none;width:100%!important;height:100%!important;
+  max-width:100%;max-height:100%;object-fit:contain!important;
+  object-position:center center!important;aspect-ratio:auto!important;
+  margin:auto!important;background:#0d1512;
+}
+#demonstracao .yk-video-cover{z-index:2}
+#demonstracao.yk64-playing .yk-video-cover{opacity:0;visibility:hidden;pointer-events:none}
+#demonstracao .yk64-controls{position:absolute;right:14px;bottom:14px;z-index:5;display:flex;gap:8px}
+#demonstracao .yk64-controls button{min-height:42px;padding:10px 14px;border:1px solid rgba(227,255,204,.27);border-radius:100px;background:rgba(10,22,16,.87);color:#e9f5e3;font:600 13px system-ui;cursor:pointer;backdrop-filter:blur(12px)}
+#demonstracao .yk64-controls button:hover,#demonstracao .yk64-controls button:focus-visible{background:#c6f18a;color:#10200e;outline:2px solid #c6f18a;outline-offset:2px}
+@media(max-width:600px){#demonstracao .yk64-controls{right:8px;bottom:8px}#demonstracao .yk64-controls button{padding:9px 10px;font-size:12px}}

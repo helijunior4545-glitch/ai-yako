@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=AI Yako
+Comment=Financial Intelligence
+Exec=/home/farcry/Documents/lojasnova2/lojasnova_recuperado/app_qvac_financial/clients/desktop/linux/ai-yako-launch.sh
+Icon=/home/farcry/Documents/lojasnova2/lojasnova_recuperado/app_qvac_financial/clients/desktop/linux/brand/yako-256.png
+Terminal=false
+Categories=Office;Finance;
+StartupNotify=true

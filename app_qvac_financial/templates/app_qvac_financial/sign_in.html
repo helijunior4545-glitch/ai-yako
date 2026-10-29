@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="same-origin"><title>YAKO. — Access</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/static/app_qvac_financial/brand/yako-32.png?v=1055"><link rel="apple-touch-icon" href="/static/app_qvac_financial/brand/yako-180.png?v=1055">
+<style>
+:root{color-scheme:dark;font-family:Inter,ui-sans-serif,system-ui,sans-serif;--lime:#c4ff3d;--muted:#9ea5a1}*{box-sizing:border-box}body{min-height:100svh;margin:0;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse 500px 380px at 50% 45%,#1b2515 0%,#111413 58%,#0d0f10 100%);color:#f1f4f0}main{width:min(408px,100%);border:1px solid #30382d;background:linear-gradient(150deg,#1b1e1b,#151817);border-radius:20px;padding:36px 33px 29px;box-shadow:0 26px 80px #0008}.brand{display:flex;justify-content:center;align-items:center;gap:10px;margin-bottom:29px;text-decoration:none;color:inherit}.brand img{width:39px;height:39px;border-radius:11px}.brand strong{font-size:26px;letter-spacing:-.06em}.brand strong span{color:var(--lime)}h1{text-align:center;font-size:25px;letter-spacing:-.045em;line-height:1.2;margin:0 0 9px}.lead{text-align:center;color:var(--muted);font-size:13px;line-height:1.65;margin:0 0 27px}.primary{width:100%;min-height:49px;background:var(--lime);color:#141a0e;border:0;border-radius:10px;font:750 13px/1.2 inherit;font-family:inherit;font-weight:750;cursor:pointer;transition:transform .2s,filter .2s,box-shadow .2s}.primary:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:0 8px 25px #bfff3924}.primary:active{transform:translateY(0)}.primary:disabled{opacity:.6;cursor:wait}.note{text-align:center;color:#89928a;font-size:11px;margin:12px 0 24px}.divider{display:flex;align-items:center;gap:12px;color:#7f8880;font-size:10px;letter-spacing:.1em;margin:0 0 18px}.divider:before,.divider:after{content:'';height:1px;background:#323832;flex:1}.secondary{display:block;width:100%;background:#222722;border:1px solid #3c443a;border-radius:10px;padding:13px;color:#e6eee2;text-align:center;font-size:13px;font-weight:650;cursor:pointer}.secondary:hover{border-color:#8aa955}.form{display:none;margin-top:16px}.form.open{display:block}.form label{display:block;margin:13px 0 6px;font-size:12px;color:#c2c8c0}.form input{width:100%;border:1px solid #434b41;background:#131713;color:#f5f5f3;border-radius:9px;padding:12px;font:inherit;font-size:13px}.form input:focus-visible{outline:2px solid var(--lime);outline-offset:2px}.form button{margin-top:17px}.bottom{text-align:center;margin:23px 0 0;font-size:12px;color:#a6aea5}.bottom a,.back{color:var(--lime);text-decoration:none}.bottom a:hover,.back:hover{text-decoration:underline}.back{display:block;text-align:center;margin-top:21px;font-size:11px;color:#929b90}.status{min-height:18px;text-align:center;font-size:12px;color:#f1b9b9;margin:10px 0 0}button:focus-visible,a:focus-visible{outline:2px solid var(--lime);outline-offset:3px}@media(max-width:430px){main{padding:29px 23px}h1{font-size:23px}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style><script data-yako-csrf-v1059>
+(function () {
+  'use strict';
+  const cookieName = 'yako_csrf_token';
+  const originalFetch = window.fetch.bind(window);
+  function readCookie(name) {
+    const prefix = name + '=';
+    const found = document.cookie.split(';').map(s => s.trim()).find(s => s.startsWith(prefix));
+    return found ? decodeURIComponent(found.slice(prefix.length)) : '';
+  }
+  window.fetch = function(input, init) {
+    const url = typeof input === 'string' ? input : (input && input.url) || '';
+    const resolved = new URL(url, window.location.href);
+    const method = String((init && init.method) || (input && input.method) || 'GET').toUpperCase();
+    if (resolved.origin === window.location.origin &&
+        /^\/qvac-financial\/auth\/(jury-access|login|register)\/?$/.test(resolved.pathname) &&
+        method === 'POST') {
+      const token = readCookie(cookieName);
+      if (token) {
+        const headers = new Headers((init && init.headers) || (input && input.headers) || {});
+        headers.set('X-YAKO-CSRF', token);
+        init = Object.assign({}, init || {}, {headers: headers, credentials: 'same-origin'});
+      }
+    }
+    return originalFetch(input, init);
+  };
+})();
+</script>
+</head><body><main>
+<a class="brand" href="/qvac-financial/" aria-label="YAKO home"><img src="/static/app_qvac_financial/brand/yako-192.png?v=1055" alt=""><strong>YAKO<span>.</span></strong></a>
+<h1>Welcome to YAKO.</h1><p class="lead">Explore the real workspace in one click.<br>No registration required.</p>
+<button id="jury" class="primary" type="button">Explore YAKO — No Sign-Up Required <span aria-hidden="true">↗</span></button><p class="note">Private demo session · Independent account</p>
+<div class="divider">OR</div><button id="toggle" class="secondary" type="button" aria-expanded="false" aria-controls="form">Sign in with email</button>
+<form class="form" id="form"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="username" maxlength="254" required><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required><button class="primary" id="submit" type="submit">Sign in</button></form>
+<p id="status" class="status" role="status" aria-live="polite"></p><p class="bottom">New to YAKO? <a href="/qvac-financial/auth/signup/">Create an account</a></p><a class="back" href="/qvac-financial/">← Back to homepage</a>
+</main><script>
+(()=>{'use strict';const q=s=>document.querySelector(s),status=q('#status'),jury=q('#jury'),toggle=q('#toggle'),form=q('#form');const csrf=()=>{const v=document.cookie.split('; ').find(x=>x.startsWith('csrftoken='));return v?decodeURIComponent(v.slice(10)):''};async function post(url,data){const r=await fetch(url,{method:'POST',credentials:'same-origin',headers:{'Content-Type':'application/json','X-CSRFToken':csrf()},body:JSON.stringify(data)});let d={};try{d=await r.json()}catch{}if(!r.ok||!d.ok)throw Error(d.error||'Unable to sign in. Please try again.');location.assign('/qvac-financial/app/')}toggle.addEventListener('click',()=>{const open=!form.classList.contains('open');form.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));if(open)q('#email').focus()});jury.addEventListener('click',async()=>{jury.disabled=true;status.textContent='Preparing your private workspace…';try{await post('/qvac-financial/auth/jury-access/',{})}catch(e){status.textContent=e.message;jury.disabled=false}});form.addEventListener('submit',async e=>{e.preventDefault();const btn=q('#submit');btn.disabled=true;status.textContent='Signing in…';try{await post('/qvac-financial/auth/login/',{email:q('#email').value,password:q('#password').value})}catch(e){status.textContent=e.message;btn.disabled=false}})})();
+</script></body></html>

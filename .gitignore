@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# Databases
+*.sqlite3
+*.db
+
+# Logs and caches
+*.log
+*.tmp
+.cache/
+
+# Build artifacts
+build/
+dist/
+*.AppImage
+*.tar.gz
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AI YAKO - local backups and installer artifacts
+*.bak
+*.backup
+*.pre_v*
+*.pre_yako*
+*.before_*
+*.pre_path_fix
+*.v1012-backup
+.yako_v*_backup/
+.yako_v*_installed
+.yako_*_manifest.json

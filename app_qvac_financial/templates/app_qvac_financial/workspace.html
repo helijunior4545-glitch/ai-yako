@@ -1,0 +1,157 @@
+<!-- YAKO_V1036_FULL_RUNTIME -->
+<!DOCTYPE html>
+
+<html lang="en"><head><meta name="referrer" content="same-origin"><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#101112" name="theme-color"/><title>AI Yako · Financial Intelligence</title><link href="/static/app_qvac_financial/css/yako-v1036.css" rel="stylesheet"/><!-- YAKO_BRAND_V1043 -->
+<link rel="icon" type="image/png" sizes="32x32" href="/static/app_qvac_financial/brand/yako-32.png?v=1043">
+<link rel="icon" type="image/png" sizes="192x192" href="/static/app_qvac_financial/brand/yako-192.png?v=1043">
+<link rel="shortcut icon" href="/static/app_qvac_financial/brand/yako.ico?v=1043">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/app_qvac_financial/brand/yako-180.png?v=1043">
+<link rel="manifest" href="/static/app_qvac_financial/brand/manifest.webmanifest?v=1043">
+<meta name="application-name" content="AI Yako">
+<style id="yako46-motion-style">/* AI Yako V10.46 shared motion system, same code on web and desktop */
+:root{--yako-motion-accent:#c8fa52;--yako-motion-time:240ms}
+@keyframes yako46-scan{0%{transform:translateX(-120%);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(420%);opacity:0}}
+@keyframes yako46-breathe{0%,100%{opacity:.65}50%{opacity:1}}
+#yako46-activity{position:fixed;z-index:9999;top:0;left:0;width:100%;height:3px;pointer-events:none;opacity:0;overflow:hidden;transition:opacity var(--yako-motion-time) ease}
+#yako46-activity::before{content:'';position:absolute;inset:0;width:32%;background:linear-gradient(90deg,transparent,var(--yako-motion-accent),#fff,var(--yako-motion-accent),transparent);box-shadow:0 0 14px var(--yako-motion-accent);animation:yako46-scan 1.45s ease-in-out infinite}
+body.yako46-busy #yako46-activity{opacity:1}
+body.yako46-busy .brand-icon{animation:yako46-breathe 1.3s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){#yako46-activity::before,.yako46-busy .brand-icon{animation:none!important}#yako46-activity{transition:none}}
+</style><style>
+/* YAKO_V1058_PREMIUM_JURY */
+.yako-jury-intro{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#c4ff3d;margin:8px 0 14px;min-height:1.6em}
+.yako-jury-intro::after{content:"";display:inline-block;width:1px;height:1.1em;background:#c4ff3d;margin-left:3px;vertical-align:-2px;animation:yako1058blink .8s steps(1) infinite}
+@keyframes yako1058blink{50%{opacity:0}}
+.suggestions.yako-jury-prompts{display:flex;flex-wrap:wrap;gap:9px;max-width:760px;margin:22px auto 0;justify-content:center}
+.suggestions.yako-jury-prompts button{font:inherit;font-size:12px;letter-spacing:.01em;line-height:1.35;color:#e7eae5;background:#202322;border:1px solid #3b4535;border-radius:12px;padding:12px 15px;transition:transform .2s,border-color .2s,background .2s;cursor:pointer}
+.suggestions.yako-jury-prompts button:hover{transform:translateY(-2px);border-color:#c4ff3d;background:#273024}
+.suggestions.yako-jury-prompts button:focus-visible{outline:2px solid #c4ff3d;outline-offset:3px}
+@media(max-width:520px){.suggestions.yako-jury-prompts{display:grid;grid-template-columns:1fr 1fr}.suggestions.yako-jury-prompts button{padding:11px 8px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){.yako-jury-intro::after{animation:none}.suggestions.yako-jury-prompts button{transition:none}}
+</style><style id="yako-web-download-style" data-yako-web-download="2">
+/* AI YAKO V2 · Iconografia vetorial refinada, padrão Lucide, sem dependência de CDN */
+.ywd-trigger{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;padding:7px 12px;border:1px solid #414a40;border-radius:10px;background:#1c211e;color:#eef4e9;font:600 12px/1.2 system-ui,sans-serif;letter-spacing:.01em;cursor:pointer;white-space:nowrap;transition:background .18s,border-color .18s,transform .18s}
+.ywd-trigger:hover{background:#293229;border-color:#b9ef57;transform:translateY(-1px)}
+.ywd-trigger:focus-visible,.ywd-close:focus-visible,.ywd-link:focus-visible{outline:2px solid #c8fa52;outline-offset:3px}
+.ywd-icon{width:19px;height:19px;flex:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.ywd-trigger .ywd-icon{width:16px;height:16px}
+.ywd-overlay[hidden]{display:none!important}
+.ywd-overlay{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;padding:20px;background:rgba(4,8,6,.68);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+.ywd-dialog{box-sizing:border-box;width:min(100%,510px);max-height:min(88dvh,760px);overflow:auto;border:1px solid #3b443b;border-radius:19px;background:#171c19;color:#edf3ec;box-shadow:0 30px 100px rgba(0,0,0,.55);padding:25px}
+.ywd-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:19px}
+.ywd-kicker{font:600 10px/1.4 system-ui,sans-serif;letter-spacing:.17em;color:#c8fa52;text-transform:uppercase}
+.ywd-title{font:650 25px/1.2 system-ui,sans-serif;letter-spacing:-.045em;margin:7px 0 5px}
+.ywd-sub{font:400 12px/1.6 system-ui,sans-serif;color:#aeb8ad;margin:0}
+.ywd-close{display:grid;place-items:center;border:1px solid #3b443b;border-radius:9px;background:#242b25;color:#e9efe6;cursor:pointer;width:35px;height:35px;flex:none}
+.ywd-list{display:grid;gap:9px}
+.ywd-row{display:flex;align-items:center;gap:12px;min-height:66px;padding:12px 13px;border:1px solid #343c35;border-radius:12px;background:#1e2420}
+.ywd-row.ywd-ready{border-color:#566d3a;background:#222b20}
+.ywd-os{display:grid;place-items:center;width:39px;height:39px;border:1px solid #404c40;border-radius:11px;background:#303831;color:#d6e2d2;flex:none}
+.ywd-ready .ywd-os{background:#34432c;border-color:#678448;color:#d8ffa2}
+.ywd-os .ywd-icon{width:22px;height:22px}
+.ywd-meta{flex:1;min-width:0}.ywd-name{display:block;font:600 13px/1.5 system-ui,sans-serif}.ywd-status{display:block;font:400 11px/1.5 system-ui,sans-serif;color:#a8b3a6}
+.ywd-link{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:34px;padding:0 12px;border-radius:8px;background:#c8fa52;color:#151b12;text-decoration:none;font:700 11px/1 system-ui,sans-serif;white-space:nowrap}
+.ywd-link .ywd-icon{width:14px;height:14px}.ywd-link:hover{background:#e1ff9b}
+.ywd-disabled{display:inline-flex;align-items:center;gap:5px;font:600 10px/1.3 system-ui,sans-serif;color:#a3ada2;white-space:nowrap}.ywd-disabled .ywd-icon{width:13px;height:13px;color:#b9c8a6}
+.ywd-foot{margin:17px 0 0;color:#89988a;font:400 11px/1.5 system-ui,sans-serif}
+body.ywd-modal-open{overflow:hidden}
+@media(max-width:680px){.ywd-trigger{padding:7px 9px;min-width:36px}.ywd-trigger-label{display:none}.ywd-overlay{padding:12px}.ywd-dialog{padding:19px;border-radius:16px}.ywd-row{gap:9px;padding:10px}.ywd-link{padding:0 10px}}
+@media(max-width:380px){.ywd-row{flex-wrap:wrap}.ywd-meta{flex-basis:calc(100% - 52px)}.ywd-link,.ywd-disabled{margin-left:51px}}
+@media(prefers-reduced-motion:no-preference){.ywd-dialog{animation:ywd-in .2s ease-out}@keyframes ywd-in{from{opacity:0;transform:translateY(9px) scale(.985)}to{opacity:1;transform:none}}}
+</style></head><body>
+<div class="app"><aside class="sidebar" id="sidebar" aria-label="Workspace navigation"><div class="brand"><div aria-hidden="true" class="brand-icon"><img src="/static/app_qvac_financial/brand/yako-128.png?v=1043" alt="" width="32" height="32" style="display:block;width:100%;height:100%;object-fit:contain;border-radius:inherit"></div><div><strong>YAKO<span class="accent">.</span></strong><small>FINANCIAL INTELLIGENCE</small></div><button type="button" id="railToggle" class="rail-toggle" aria-label="Recolher menu" aria-expanded="true" aria-controls="sidebar" title="Recolher menu"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 4v16"/><path d="m15 9 3 3-3 3"/></svg></button></div><button class="new" id="new">Nova análise <span>⌘ K</span></button><div class="side-label">WORKSPACE</div><nav><button class="nav active" data-view="chat"><span>◈</span> Intelligence <span class="tag">LOCAL</span></button><button class="nav" data-view="lab"><span>▤</span> Scenario Lab</button><button class="nav" data-view="model"><span>⚙</span> Model Center</button></nav><div class="side-label history-label">HISTÓRICO <span>LOCAL</span></div><div class="history" id="history"></div><div class="sidebar-foot"><div class="live-dot"></div><div><b>Private workspace</b><small>Dados neste dispositivo</small></div></div></aside>
+<main class="main"><div class="floating-controls"><button type="button" class="icon-control mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu" aria-controls="sidebar" aria-expanded="false">☰</button><label class="locale-picker" aria-label="Language"><span aria-hidden="true">◎</span><select id="locale" aria-label="Language"><option value="en">English</option><option value="pt">Português</option><option value="es">Español</option><option value="fr">Français</option></select></label><span aria-label="AI Yako, inteligência financeira local" class="floating-brand">Yako<span class="floating-dot">.</span></span><span class="sr-only" id="pageName">AI Intelligence</span><!-- YAKO_WEB_DOWNLOAD_V2 --><button type="button" class="ywd-trigger" id="ywd-open" aria-haspopup="dialog" aria-controls="ywd-overlay" aria-label="Download AI YAKO apps" title="Download Apps"><svg class="ywd-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-4-4 4 4 4-4M4 17v3h16v-3"/></svg><span class="ywd-trigger-label">Download Apps</span></button><button aria-expanded="false" aria-label="Abrir ou fechar evidências" class="icon-control insight-toggle" id="toggleInsights" title="Abrir painel de evidências">◇ <span id="evidenceBadge"></span></button></div>
+<section class="view" id="chatView"><div class="messages" id="messages"><div class="hero" id="hero"><div class="hero-orbit">✳</div><div class="eyebrow">FINANCIAL INTELLIGENCE · PRIVATE BY DESIGN</div><h1>Pergunte ao Yako sobre<br/><em>suas finanças.</em></h1><p>Faça perguntas, analise seu fluxo de caixa ou compare cenários. O processamento é local.</p><div class="yako-jury-intro" id="yako-jury-intro" aria-label="AI workspace ready"></div><div class="suggestions yako-jury-prompts"><button type="button" data-prompt="An investment platform promises guaranteed returns of 30% per month with zero risk, requests an immediate deposit of 5,000 USD, and provides no independent audit. Identify the red flags, explain what can and cannot be verified, and suggest due diligence steps.">Detect Investment Fraud</button><button type="button" data-prompt="A company promises a guaranteed 25% monthly return, has no published audited statements, and refuses to identify its custodians. Assess the financial and counterparty risks. Explain why guaranteed returns require independent verification.">Assess Financial Risk</button><button type="button" data-prompt="A hypothetical small business receives 12000 USD monthly revenue and pays 4500 USD rent and payroll, 2000 USD supplies, 1000 USD utilities, and 500 USD loan payments. Calculate monthly inflows, outflows and net cash flow, showing each formula and identifying limitations.">Evaluate Cash Flow</button><button type="button" data-prompt="Compare two hypothetical 12-month savings scenarios: A starts with 10000 USD and earns 0.5% per month compounded, with no additional deposits; B starts with 10000 USD and earns 0.8% per month compounded, with no additional deposits. Show the compound interest formula, approximate final balances and why the higher return may involve higher risk.">Compare Scenarios</button><button type="button" data-prompt="A hypothetical household earns 6000 USD per month, spends 2200 USD on housing, 850 USD on food, 450 USD on transportation, 500 USD on utilities and insurance, and 600 USD on other expenses. Calculate the remaining monthly balance and suggest an illustrative emergency savings allocation without claiming this is personal financial advice.">Build a Budget Strategy</button></div></div></div></section><div class="composer-area"><div class="composer"><textarea id="prompt" maxlength="12000" placeholder="Pergunte sobre riscos, investimentos ou cenários..." rows="2"></textarea><div class="composer-bottom"><label class="select-wrap">◈ <select id="mode"><option value="qvac">QVAC + Evidências</option><option value="rules">Somente evidências</option></select></label><span class="hint">Enter para enviar · Shift+Enter para nova linha</span><button aria-label="Enviar mensagem" id="send">↑</button></div></div><div class="disclaimer">Análise educacional. Não representa aconselhamento financeiro nem executa transações.</div></div><aside class="insights" id="insights"> <button aria-label="Fechar evidências" class="close-insights" id="closeInsights">×</button><div class="insights-head"><div><div class="eyebrow">EVIDENCE ENGINE</div><h2>Painel de análise</h2></div><span class="pill" id="riskPill">AGUARDANDO</span></div><div class="metric-grid"><div class="metric"><small>SINAIS DETECTADOS</small><strong id="riskCount">—</strong></div><div class="metric"><small>MAIOR SEVERIDADE</small><strong id="severity">—</strong></div></div><div class="section-title">EVIDÊNCIAS IDENTIFICADAS</div><div class="findings" id="findings"><div class="empty-small">Os sinais verificados aparecerão aqui assim que você enviar um cenário.</div></div><div class="section-title">ETAPAS DE PROCESSAMENTO</div><div class="steps"><div class="step done" id="stepRules"><span>01</span> Extração de evidências <b>—</b></div><div class="step" id="stepModel"><span>02</span> Interpretação QVAC <b>—</b></div><div class="step" id="stepFinish"><span>03</span> Relatório local <b>—</b></div></div><div class="diagnostics"><div class="section-title">DIAGNÓSTICO</div><div id="metrics">Aguardando análise.</div></div></aside>
+<section class="view hidden" id="labView"><div class="page-heading"><div class="eyebrow">FINANCIAL TOOLS</div><h1>Scenario Lab<span class="accent">.</span></h1><p>Projeções matemáticas calculadas por código, não pelo modelo de linguagem.</p></div><div class="lab-card"><div class="form-grid"><label>Capital inicial (R$)<input id="principal" min="0" type="number" value="100000"/></label><label>Taxa mensal (%)<input id="rate" step="0.1" type="number" value="1"/></label><label>Meses<input id="months" max="600" min="1" type="number" value="36"/></label><label>Aporte mensal (R$)<input id="contribution" min="0" type="number" value="0"/></label></div><button class="primary" id="calculate">Calcular projeção →</button><div class="lab-result" id="labResult">Configure os parâmetros e calcule.</div><svg aria-label="Gráfico de projeção financeira" id="chart" preserveaspectratio="none" role="img" viewbox="0 0 800 250"></svg><div class="disclaimer">Simulação hipotética; não representa previsão de mercado.</div></div></section>
+<section class="view hidden" id="modelView"><div class="page-heading"><div class="eyebrow">LOCAL COMPUTE</div><h1>Model Center<span class="accent">.</span></h1><p>Transparência operacional, privacidade e limites do sistema.</p></div><div class="model-grid"><article><small>RUNTIME</small><h2>QVAC Python SDK</h2><p>Inferência local por demanda. Requer SDK e modelo previamente armazenado.</p></article><article><small>MODEL</small><h2>Llama 3.2 1B · Q4_0</h2><p>Modelo pequeno; pode cometer erros ou recusar solicitações legítimas.</p></article><article><small>PRIVACIDADE</small><h2>127.0.0.1</h2><p>Interface HTTP limitada ao loopback. Histórico SQLite local, sem criptografia.</p></article><article><small>CONTROLES</small><h2>Somente análise</h2><p>Sem carteira, assinaturas, ordens ou transferências financeiras.</p></article></div><p class="note">O modo offline depende do modelo já estar em cache. O SDK pode consultar o registro ao carregar; desconecte a rede para validar cada instalação.</p></section>
+</main></div><script defer src="/static/app_qvac_financial/js/yako-v1036.js"></script><script id="yako46-motion-script">/* AI Yako V10.46: shared progress microinteraction; no network calls */
+(function(){'use strict';if(window.__yako46)return;window.__yako46=true;
+function init(){if(document.getElementById('yako46-activity'))return;
+var bar=document.createElement('div');bar.id='yako46-activity';bar.setAttribute('role','progressbar');bar.setAttribute('aria-label','Análise em andamento');bar.setAttribute('aria-valuetext','Processando');bar.hidden=true;document.body.appendChild(bar);
+var pending=0,timer=null;
+function paint(){var active=pending>0;document.body.classList.toggle('yako46-busy',active);bar.hidden=!active;}
+function begin(){pending++;paint();clearTimeout(timer);timer=setTimeout(function(){pending=0;paint()},180000)}
+function end(){pending=Math.max(0,pending-1);paint();if(!pending)clearTimeout(timer)}
+// Detect only chat form submissions and AI API calls; don't animate unrelated requests.
+document.addEventListener('submit',function(e){if(e.target.closest('form')&&e.target.querySelector('textarea')){begin();setTimeout(end,180000)}},true);
+var orig=window.fetch;if(typeof orig==='function')window.fetch=function(input,opts){
+ var url=typeof input==='string'?input:(input&&input.url)||'';
+ var match=/\/((api\/)?(chat|analy[sz]e|message|stream|ask|respond))([/?#]|$)/i.test(url);
+ if(!match)return orig.apply(this,arguments);
+ begin();var promise;
+ try{promise=orig.apply(this,arguments)}catch(err){end();throw err}
+ return Promise.resolve(promise).then(function(response){
+ // Streaming can continue after headers: track reader completion when possible.
+ if(response.body&&/event-stream|ndjson/i.test(response.headers.get('content-type')||'')){
+  try{var clone=response.clone();clone.text().then(end,end)}catch(e){end()}
+ }else end();return response;
+ },function(error){end();throw error});
+};
+window.addEventListener('pagehide',function(){pending=0;paint()});
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+</script><script>
+/* YAKO_V1058_PREMIUM_JURY */
+(function(){
+ const target=document.getElementById('yako-jury-intro');if(!target)return;
+ const message='YOUR FINANCIAL INTELLIGENCE IS READY';
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){target.textContent=message;return}
+ let n=0;const timer=window.setInterval(()=>{if(!target.isConnected){clearInterval(timer);return}target.textContent=message.slice(0,++n);if(n>=message.length)clearInterval(timer)},42);
+})();
+</script><script data-yako-v1060-prompts>
+(function () {
+  'use strict';
+  const demos = [
+    ['Detect Investment Fraud', 'An investment platform promises a guaranteed 30% monthly return, requires an immediate deposit, and provides no independent audit. Identify the warning signs and explain what evidence is missing.'],
+    ['Analyze Financial Risk', 'I have $10,000. One investment offers a guaranteed 25% monthly return, while another offers an estimated 6% annual return with market risk. Compare the claims, uncertainty, and potential warning signs.'],
+    ['Evaluate Cash Flow', 'My monthly income is $5,200. Rent is $1,600, food is $650, transport is $350, utilities are $300, and debt payments are $900. Calculate my remaining cash flow and identify financial vulnerabilities.'],
+    ['Compare Investment Scenarios', 'Compare investing $5,000 for one year at 4%, 7%, and 10% annual returns, assuming annual compounding, no additional deposits, and no fees or taxes. Calculate the ending value for each scenario.'],
+    ['Build a Financial Strategy', 'My monthly income is $4,000, essential expenses are $2,500, and debt payments are $600. I have $1,000 in savings. Propose a realistic six-month emergency-fund strategy using only the available monthly surplus.']
+  ];
+  function install() {
+    const existing = document.querySelector('.suggestions [data-prompt]');
+    if (!existing || !existing.parentElement) return;
+    const parent = existing.parentElement;
+    const originals = Array.from(parent.querySelectorAll('[data-prompt]'));
+    originals.forEach(b => { b.hidden = true; b.style.display = 'none'; });
+    if (document.querySelector('[data-yako-v1060-demo]')) return;
+    demos.forEach(([label, prompt]) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = existing.className;
+      button.textContent = label;
+      button.setAttribute('data-yako-v1060-demo', '1');
+      button.addEventListener('click', () => {
+        const oldPrompt = existing.dataset.prompt;
+        existing.dataset.prompt = prompt;
+        existing.click();
+        existing.dataset.prompt = oldPrompt;
+      });
+      parent.appendChild(button);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', install);
+  else install();
+})();
+</script>
+<!-- YAKO_WEB_DOWNLOAD_V2 -->
+<div class="ywd-overlay" id="ywd-overlay" hidden>
+ <section class="ywd-dialog" role="dialog" aria-modal="true" aria-labelledby="ywd-title" aria-describedby="ywd-desc" tabindex="-1">
+  <header class="ywd-head"><div><div class="ywd-kicker">AI YAKO · APPLICATIONS</div><h2 class="ywd-title" id="ywd-title">Get AI YAKO</h2><p class="ywd-sub" id="ywd-desc">Choose your platform to get started.</p></div><button type="button" class="ywd-close" id="ywd-close" aria-label="Close download dialog"><svg class="ywd-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></header>
+  <div class="ywd-list"><div class="ywd-row ywd-ready"><span class="ywd-os" aria-hidden="true"><svg class="ywd-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="3"/><path d="M9 8h.01M15 8h.01M9 14c2 2 4 2 6 0M9 18h6"/></svg></span><div class="ywd-meta"><span class="ywd-name">Linux x86_64</span><span class="ywd-status">Available · .tar.gz package</span></div><a class="ywd-link" href="https://pub-2f08c8cef10849eba81e894858738696.r2.dev/AI-YAKO-Linux-x86_64-v1.3.tar.gz" target="_blank" rel="noopener noreferrer" aria-label="Download AI YAKO for Linux x86 64">Download <svg class="ywd-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div><div class="ywd-row"><span class="ywd-os" aria-hidden="true"><svg class="ywd-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16M3 12h18"/></svg></span><div class="ywd-meta"><span class="ywd-name">Windows</span><span class="ywd-status">Desktop · em desenvolvimento</span></div><span class="ywd-disabled" aria-label="Em desenvolvimento"><svg class="ywd-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>In development</span></div><div class="ywd-row"><span class="ywd-os" aria-hidden="true"><svg class="ywd-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg></span><div class="ywd-meta"><span class="ywd-name">macOS</span><span class="ywd-status">Desktop · em desenvolvimento</span></div><span class="ywd-disabled" aria-label="Em desenvolvimento"><svg class="ywd-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>In development</span></div><div class="ywd-row"><span class="ywd-os" aria-hidden="true"><svg class="ywd-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span><div class="ywd-meta"><span class="ywd-name">Android</span><span class="ywd-status">Mobile · em desenvolvimento</span></div><span class="ywd-disabled" aria-label="Em desenvolvimento"><svg class="ywd-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>In development</span></div><div class="ywd-row"><span class="ywd-os" aria-hidden="true"><svg class="ywd-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 5h4M11 19h2"/></svg></span><div class="ywd-meta"><span class="ywd-name">iOS</span><span class="ywd-status">Mobile · em desenvolvimento</span></div><span class="ywd-disabled" aria-label="Em desenvolvimento"><svg class="ywd-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>In development</span></div></div><p class="ywd-foot">Linux requires a compatible x86_64 environment. Downloads are unrestricted.</p>
+ </section>
+</div>
+<script id="yako-web-download-script">
+(function(){'use strict';
+ var trigger=document.getElementById('ywd-open'),overlay=document.getElementById('ywd-overlay'),close=document.getElementById('ywd-close');
+ if(!trigger||!overlay||!close)return;
+ var dialog=overlay.querySelector('[role="dialog"]'),previous=null;
+ function open(){previous=document.activeElement;overlay.hidden=false;document.body.classList.add('ywd-modal-open');trigger.setAttribute('aria-expanded','true');close.focus()}
+ function shut(){overlay.hidden=true;document.body.classList.remove('ywd-modal-open');trigger.setAttribute('aria-expanded','false');if(previous&&previous.isConnected)previous.focus()}
+ trigger.setAttribute('aria-expanded','false');trigger.addEventListener('click',open);close.addEventListener('click',shut);
+ overlay.addEventListener('click',function(e){if(e.target===overlay)shut()});
+ document.addEventListener('keydown',function(e){if(overlay.hidden)return;if(e.key==='Escape'){e.preventDefault();shut();return}if(e.key!=='Tab')return;var f=Array.from(dialog.querySelectorAll('button:not([disabled]),a[href],input:not([disabled]),[tabindex]:not([tabindex="-1"])')).filter(function(el){return el.getClientRects().length});if(!f.length){e.preventDefault();dialog.focus();return}var first=f[0],last=f[f.length-1];if(e.shiftKey&&(document.activeElement===first||document.activeElement===dialog)){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
+})();
+</script></body></html>
+

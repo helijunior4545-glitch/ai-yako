@@ -1,0 +1,21 @@
+/* AI Yako V10.46 shared motion system, same code on web and desktop */
+:root{--yako-motion-accent:#c8fa52;--yako-motion-time:240ms}
+@keyframes yako46-scan{0%{transform:translateX(-120%);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(420%);opacity:0}}
+@keyframes yako46-breathe{0%,100%{opacity:.65}50%{opacity:1}}
+#yako46-activity{position:fixed;z-index:9999;top:0;left:0;width:100%;height:3px;pointer-events:none;opacity:0;overflow:hidden;transition:opacity var(--yako-motion-time) ease}
+#yako46-activity::before{content:'';position:absolute;inset:0;width:32%;background:linear-gradient(90deg,transparent,var(--yako-motion-accent),#fff,var(--yako-motion-accent),transparent);box-shadow:0 0 14px var(--yako-motion-accent);animation:yako46-scan 1.45s ease-in-out infinite}
+body.yako46-busy #yako46-activity{opacity:1}
+body.yako46-busy .brand-icon{animation:yako46-breathe 1.3s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){#yako46-activity::before,.yako46-busy .brand-icon{animation:none!important}#yako46-activity{transition:none}}
+
+
+/* YAKO_V1058_PREMIUM_JURY */
+.yako-jury-intro{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#c4ff3d;margin:8px 0 14px;min-height:1.6em}
+.yako-jury-intro::after{content:"";display:inline-block;width:1px;height:1.1em;background:#c4ff3d;margin-left:3px;vertical-align:-2px;animation:yako1058blink .8s steps(1) infinite}
+@keyframes yako1058blink{50%{opacity:0}}
+.suggestions.yako-jury-prompts{display:flex;flex-wrap:wrap;gap:9px;max-width:760px;margin:22px auto 0;justify-content:center}
+.suggestions.yako-jury-prompts button{font:inherit;font-size:12px;letter-spacing:.01em;line-height:1.35;color:#e7eae5;background:#202322;border:1px solid #3b4535;border-radius:12px;padding:12px 15px;transition:transform .2s,border-color .2s,background .2s;cursor:pointer}
+.suggestions.yako-jury-prompts button:hover{transform:translateY(-2px);border-color:#c4ff3d;background:#273024}
+.suggestions.yako-jury-prompts button:focus-visible{outline:2px solid #c4ff3d;outline-offset:3px}
+@media(max-width:520px){.suggestions.yako-jury-prompts{display:grid;grid-template-columns:1fr 1fr}.suggestions.yako-jury-prompts button{padding:11px 8px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){.yako-jury-intro::after{animation:none}.suggestions.yako-jury-prompts button{transition:none}}
